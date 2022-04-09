@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+:root {
+  --main-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+  --cyan: hsl(178, 100%, 50%);
+  --s-blue: hsl(215, 51%, 70%);
+  --f-300: 300;
+  --f-400: 400;
+  --f-600: 600;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+main {
+  height: 100vh;
+  background-color: var(--main-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  height: 600px;
+  width: 355px;
+  background-color: var(--card-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  .img-section {
+    width: 315px;
+    height: 315px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-image: url(./images/image-equilibrium.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    .overlay {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.25s ease-in;
+      cursor: pointer;
+
+      width: 100%;
+      height: 100%;
+      img {
+        height: 60px;
+      }
+
+      &:hover {
+        opacity: 1;
+        background-color: hsla(178, 100%, 50%, 0.5);
+        transition: opacity 0.25s ease-in-out;
+      }
+    }
+  }
+  .content {
+    margin-top: 20px;
+    font-size: 18px;
+    h1 {
+      font-size: 1.2em;
+      color: #fff;
+      &:hover {
+        color: var(--cyan);
+        cursor: pointer;
+      }
+    }
+    p {
+      margin-top: 17px;
+      font-size: 17px;
+      color: var(--s-blue);
+      line-height: 27px;
+    }
+  }
+
+  .tab {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    div {
+      display: flex;
+      width: 15ch;
+      img {
+        height: 20px;
+      }
+      span {
+        margin-left: 10px;
+      }
+    }
+    div:first-child {
+      color: var(--cyan);
+      font-weight: var(--f-600);
+    }
+    div:last-child {
+      color: var(--s-blue);
+      text-align: right;
+      justify-content: flex-end;
+    }
+  }
+  hr {
+    margin-top: 22px;
+    width: 95%;
+    border: 0.5px solid var(--line);
+  }
+  .creater-name {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    img {
+      height: 40px;
+      margin-right: 20px;
+      border: 2px solid white;
+      border-radius: 50%;
+    }
+    div {
+      color: var(--s-blue);
+      display: flex;
+      align-items: center;
+      span {
+        color: var(--white);
+        &:hover {
+          color: var(--cyan);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

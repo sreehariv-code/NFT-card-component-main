@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+:root {
+  --main-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+  --cyan: hsl(178, 100%, 50%);
+  --s-blue: hsl(215, 51%, 70%);
+  --f-300: 300;
+  --f-400: 400;
+  --f-600: 600;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+main {
+  height: 100vh;
+  background-color: var(--main-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  height: 600px;
+  width: 355px;
+  background-color: var(--card-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.card .img-section {
+  width: 315px;
+  height: 315px;
+  margin-top: 20px;
+  border-radius: 10px;
+  background-image: url(./images/image-equilibrium.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+.card .img-section .overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s ease-in;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+.card .img-section .overlay img {
+  height: 60px;
+}
+.card .img-section .overlay:hover {
+  opacity: 1;
+  background-color: hsla(178deg, 100%, 50%, 0.5);
+  transition: opacity 0.25s ease-in-out;
+}
+.card .content {
+  margin-top: 20px;
+  font-size: 18px;
+}
+.card .content h1 {
+  font-size: 1.2em;
+  color: #fff;
+}
+.card .content h1:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+.card .content p {
+  margin-top: 17px;
+  font-size: 17px;
+  color: var(--s-blue);
+  line-height: 27px;
+}
+.card .tab {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.card .tab div {
+  display: flex;
+  width: 15ch;
+}
+.card .tab div img {
+  height: 20px;
+}
+.card .tab div span {
+  margin-left: 10px;
+}
+.card .tab div:first-child {
+  color: var(--cyan);
+  font-weight: var(--f-600);
+}
+.card .tab div:last-child {
+  color: var(--s-blue);
+  text-align: right;
+  justify-content: flex-end;
+}
+.card hr {
+  margin-top: 22px;
+  width: 95%;
+  border: 0.5px solid var(--line);
+}
+.card .creater-name {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.card .creater-name img {
+  height: 40px;
+  margin-right: 20px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+.card .creater-name div {
+  color: var(--s-blue);
+  display: flex;
+  align-items: center;
+}
+.card .creater-name div span {
+  color: var(--white);
+}
+.card .creater-name div span:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */
